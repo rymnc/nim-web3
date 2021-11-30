@@ -2,6 +2,8 @@
 
 set -ex
 npm install ganache-cli
+# prevent ganache failed to start
+export NODE_OPTIONS=--openssl-legacy-provider
 nohup ./node_modules/.bin/ganache-cli -s 0 &
 nimble install -y
 
