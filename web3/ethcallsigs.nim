@@ -73,3 +73,12 @@ proc shh_newFilter(filterOptions: FilterOptions, to: array[60, byte], topics: se
 proc shh_uninstallFilter(id: int): bool
 proc shh_getFilterChanges(id: int): seq[WhisperMessage]
 proc shh_getMessages(id: int): seq[WhisperMessage]
+
+# TODO: @tavurth
+proc eth_createAccessList(call: EthCall, blockId: BlockIdentifier): UInt256
+proc eth_feeHistory(paramA: string, paramB: string, paramC: seq[string]): UInt256
+
+proc debug_getRawBlock(paramA: string)
+proc debug_getRawHeader(paramA: string)
+proc debug_getRawReceipts(paramA: string)
+proc debug_getRawTransaction(paramA: string)
